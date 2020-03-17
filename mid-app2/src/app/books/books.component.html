@@ -1,0 +1,10 @@
+<h1> Kenes Aruzhan 18bd11108</h1>
+<div class="container"><h2 >Categories</h2>
+    <ul class="books">
+      <li *ngFor="let category of categories">
+        <a routerLink="/bookId/{{category.id}}">
+        <span class="badge">{{category.id}}</span> {{category.name}}
+        </a>
+      </li>
+    </ul>
+    </div>

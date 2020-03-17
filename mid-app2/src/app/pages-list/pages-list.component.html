@@ -1,0 +1,37 @@
+<div *ngIf="book">
+    <button  style="margin-left:200px" (click)="goBack()">go back</button>
+   <h1 style="margin-left:200px">Pages</h1>
+    <div style="margin-left:200px" *ngFor="let product of products">
+  
+      <table>
+          <tr>
+                    <td style="width:35%; ">
+            <h3>
+              <a [title]="pages.id ">
+                {{ pages.id }}
+              </a><br><br>
+              <a  class="more" routerLink="/pagesId/{{pages.id}}">
+                 Details
+              </a>
+            </h3>
+  
+            
+        </td>
+  <td style="width:5%"></td>
+  <td>
+      <p class="desc" *ngIf="page.description">
+        Описание: {{ product.description }}
+      </p>
+     
+        </p></strong>
+  
+    
+        
+        </a>
+      </td>
+        </tr>
+    </table>
+    </div>
+  
+  </div>
+  

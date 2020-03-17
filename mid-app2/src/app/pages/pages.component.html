@@ -1,0 +1,36 @@
+<div *ngIf="pages">
+    <button  style="margin-left:200px" (click)="goBack()">go back</button>
+    <h1 style="margin-left:200px">Products</h1>
+     <div style="margin-left:200px" >
+
+       <table>
+           <tr>
+                     <td style="width:35%; ">
+             <h3>
+               <a [title]="pages.id + ' details'" href={{product.website}}>
+                 {{ pages.id }}
+               </a>
+
+             </h3>
+
+            <!-- <p *ngIf="product.img">
+                 <img src={{product.img}}>
+               </p>-->
+         </td>
+   <td style="width:5%"></td>
+   <td>
+       <p  *ngIf="product.description">
+         текст: {{ product.description }}
+       </p>
+
+      <strong> <p class="descript" *ngIf="product.rating">
+           is_Fav : {{ product.rating }}
+         </p></strong>
+
+        
+       </td>
+         </tr>
+     </table>
+     </div>
+
+    </div>
